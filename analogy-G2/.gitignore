@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Model cache (HuggingFace, Gensim)
+.cache/
+models/
+*.bin
+*.safetensors
+
+# Results and outputs
+*_results.csv
+*_word2vec.csv
+*_bert.csv
+*_qwen.csv
+analogy_comparison.csv
+analysis_summary.json
+*.html
+visualization_*.html
+
+# Data files
+# Keep explore_analogies.csv as example input file
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
