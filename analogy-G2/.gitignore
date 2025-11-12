@@ -36,9 +36,8 @@ ENV/
 
 # Model cache (HuggingFace, Gensim)
 .cache/
-models/
-*.bin
-*.safetensors
+# Note: models/ directory contains code files, so don't ignore it
+# Only ignore model files (handled by parent .gitignore: *.bin, *.safetensors)
 
 # Results and outputs
 *_results.csv
