@@ -16,15 +16,42 @@ A command-line tool for testing word analogies across multiple embedding models:
 
 ### Installation
 
+**Using Conda (Recommended):**
+
 ```bash
-cd analogy-platform
+# Option 1: Using environment.yml (recommended)
+conda env create -f environment.yml
+conda activate analogy
+
+# Option 2: Manual setup
+conda create -n analogy python=3.9 -y
+conda activate analogy
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+**Using venv (Alternative):**
+
+```bash
+# Create virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
 ### Usage
+
+**Activate environment:**
+```bash
+# Using conda (recommended)
+conda activate analogy
+
+# Using venv (alternative)
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
 **Single test:**
 ```bash
@@ -168,7 +195,12 @@ All models use the **same search space** (50,000 most frequent words from Word2V
 
 ### Module Not Found
 ```bash
-source venv/bin/activate
+# Using conda
+conda activate analogy
+pip install -r requirements.txt
+
+# Using venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -196,7 +228,7 @@ python cleanup_old_models.py
 ## 📁 Project Structure
 
 ```
-analogy-platform/
+analogy-G2/
 ├── models/                  # Model implementations
 │   ├── __init__.py          # Model manager
 │   ├── base_embedder.py     # Abstract base class
@@ -209,10 +241,14 @@ analogy-platform/
 ├── visualize_results.py     # Visualization
 ├── cleanup_old_models.py    # Cleanup tool
 ├── explore_analogies.csv    # Example input file
-├── requirements.txt         # Dependencies
-├── setup.sh                 # Setup script
+├── requirements.txt         # Python dependencies
+├── environment.yml          # Conda environment file
+├── setup.sh                 # Setup script (supports conda and venv)
+├── .gitignore               # Git ignore file
 └── README.md                # This file
 ```
+
+**Note:** The `venv/` directory is not included in the repository. Use conda or create your own virtual environment.
 
 ---
 
